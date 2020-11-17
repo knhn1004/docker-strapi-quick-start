@@ -1,11 +1,11 @@
 FROM node:14.14.0-alpine
 
-WORKDIR /app
+WORKDIR /srv/app
 
 COPY ./package.json .
 
-RUN npm install
+RUN yarn install
 
 COPY . .
 
-CMD ["npm", "run", "develop"]
+CMD ["yarn", "develop"]
